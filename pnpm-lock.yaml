@@ -138,6 +138,12 @@ importers:
 
   packages/ui:
     dependencies:
+      '@clerk/nextjs':
+        specifier: ^7.0.0
+        version: 7.0.1(next@16.1.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next:
+        specifier: 16.1.5
+        version: 16.1.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: ^19.2.0
         version: 19.2.0
