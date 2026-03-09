@@ -1,0 +1,270 @@
+/* SSO Status Badge */
+.sso-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sso-status--authenticated {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.sso-status--anonymous {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.sso-status__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.sso-status__indicator--active {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.sso-status__indicator--inactive {
+  background: #9ca3af;
+}
+
+.sso-status__text {
+  color: inherit;
+}
+
+.sso-status__user {
+  margin-left: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid currentColor;
+}
+
+/* SSO Provider Card */
+.sso-provider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.sso-provider-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.sso-provider-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.sso-provider-card:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.sso-provider-card__icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.sso-provider-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.sso-provider-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.sso-provider-card__description {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.sso-provider-card__arrow {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.sso-provider-card:hover .sso-provider-card__arrow {
+  transform: translateX(4px);
+  color: #3b82f6;
+}
+
+/* User Info Card */
+.user-info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.user-info-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.user-info-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info-card__avatar--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.user-info-card__details {
+  flex: 1;
+}
+
+.user-info-card__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.user-info-card__email {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.user-info-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.user-info-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info-card__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.user-info-card__value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.user-info-card__code {
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #4b5563;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .sso-provider-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .sso-provider-card:hover {
+    border-color: #3b82f6;
+    background: #111827;
+  }
+
+  .sso-provider-card__icon {
+    background: #374151;
+  }
+
+  .sso-provider-card__name {
+    color: #f9fafb;
+  }
+
+  .sso-provider-card__description {
+    color: #9ca3af;
+  }
+
+  .user-info-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .user-info-card__name {
+    color: #f9fafb;
+  }
+
+  .user-info-card__email {
+    color: #9ca3af;
+  }
+
+  .user-info-card__meta {
+    border-color: #374151;
+  }
+
+  .user-info-card__label {
+    color: #9ca3af;
+  }
+
+  .user-info-card__value {
+    color: #f9fafb;
+  }
+
+  .user-info-card__code {
+    background: #374151;
+    color: #d1d5db;
+  }
+}
