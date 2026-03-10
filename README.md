@@ -58,6 +58,13 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 ```
 
+Then copy to apps:
+
+```sh
+cp .env.local apps/docs/
+cp .env.local apps/web/
+```
+
 ### Development
 
 Run the development server:
